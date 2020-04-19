@@ -2,6 +2,8 @@ const chatForm = document.getElementById('chat-form')
 const roomName = document.getElementById('room-name')
 const userList = document.getElementById('users')
 const chatMessages = document.querySelector('.chat-messages')
+const timestamp = Date.now() / 1000 | 0
+const token = '123456789'
 
 // get username and room from url 
 const { username, room } = Qs.parse(location.search, {
@@ -12,6 +14,13 @@ const socket = io()
 
  // Join chat 
  socket.emit('joinRoom', { username, room })
+
+ firebase.database().ref("users").push().set({
+    "sender": username,
+    "room": room,
+    timestamp,
+    token
+})
 
  // Get room and users 
  socket.on('roomUsers', ({ room, users }) => {

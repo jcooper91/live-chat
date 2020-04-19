@@ -8,6 +8,7 @@
   <title>ChatCord App</title>
 </head>
 <body>
+  <iframe>
   <div class="chat-container">
     <header class="chat-header">
       <img src="https://virtual.hrgrapevine.com/hr-tech-2020/themes/default/img/logo-long.svg" alt="HR Grapevine Virtual Logo" />
@@ -18,9 +19,7 @@
         <h3><i class="fas fa-comments"></i> Room Name:</h3>
         <h2 id="room-name"></h2>
         <h3><i class="fas fa-users"></i> Users</h3>
-        <ul id="users">
-          
-        </ul>
+        <ul id="users"></ul>
       </div>
       <div class="chat-messages"></div>
     </main>
@@ -37,6 +36,33 @@
       </form>
     </div>
   </div>
+</iframe>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBOPAlbdLKsetQMBMqRHc5UfO9moOoVtgY",
+    authDomain: "hr-event-app-1.firebaseapp.com",
+    databaseURL: "https://hr-event-app-1.firebaseio.com",
+    projectId: "hr-event-app-1",
+    storageBucket: "hr-event-app-1.appspot.com",
+    messagingSenderId: "882404869979",
+    appId: "1:882404869979:web:cc94af847860c019f7bc7e",
+    measurementId: "G-0TPVL8PHWS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.3/qs.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
