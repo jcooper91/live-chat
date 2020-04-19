@@ -33,6 +33,10 @@ socket.on('message', message => {
     console.log(message)
     outputMessage(message)
 
+    firebase.database().ref("messages").push().set({
+        "message": message
+    })
+
     // Scroll down to bottom
     chatMessages.scrollTop = chatMessages.scrollHeight
 })

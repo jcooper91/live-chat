@@ -56,7 +56,7 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: #935991;
+	background: #000000;
 }
 
 .chat-main {
@@ -65,7 +65,7 @@ a {
 }
 
 .chat-sidebar {
-	background: #935991;
+	background: #000000;
 	color: #fff;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
@@ -113,7 +113,7 @@ a {
 
 .chat-form-container {
 	padding: 20px 30px;
-	background: #935991;
+	background: #000000;
 }
 
 .chat-form-container form {
@@ -137,14 +137,14 @@ a {
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: #935991;
+	background: #000000;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
 
 .join-main {
 	padding: 30px 40px;
-	background: #935991;
+	background: #000000;
 }
 
 .join-main p {
